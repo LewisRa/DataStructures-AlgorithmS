@@ -20,3 +20,6 @@ https://www.geeksforgeeks.org/applications-of-breadth-first-traversal/
 1. For a weighted graph, DFS traversal of the graph produces the minimum spanning tree and all pair shortest path tree.
 
 https://www.geeksforgeeks.org/applications-of-depth-first-search/
+
+## Applications of Queue
+ - Copy and Paste
