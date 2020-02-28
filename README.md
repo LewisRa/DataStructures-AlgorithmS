@@ -3,6 +3,19 @@
 GINI index of income equality used in Decision Trees
 ![alt text](https://github.com/LewisRa/DataStructures-AlgorithmS/blob/master/gini_formula.jpg)
 
+ ## Hashing - Search Engine
+
+## What data structure is used in SQL database?
+-Pretty much every data structure you've ever heard about - and many you probably haven't encountered - will be used somewhere in a database engine
+- For more information, get SQLite or PostgreSQL and have a look at their source.
+- The vast majority of data structures in a database don't actually have anything to do with storage.  They're for parsing, query optimization, query execution, concurrency, query scheduling, managing application connections, etc.
+1. lists and queues for parsing.
+2. trees for parse trees and execution plans.  The nodes in these trees are typically not of the same type, particularly for execution plans, which can make for adventures in debugging when things go wrong.
+3. A manner of data structures (including stored ones such as B-Trees) in index structures.
+4. Hash tables, tries, and other in-memory "speed" structures for metadata (ie, table definitions and such things).
+5. And more hash tables for lots of other things, such as lock managers, hash join structures, etc.  
+6. Some more specific to db engines are Pages and Rows, which are dynamic in their definitions and can't be completely stated as static structures in any programming language.  In this sense, they're more like networking packets than more traditional data structures.  Pages and Rows will be used in index structures and base table storage.
+
 ## Applications of Breadth First Travesal
 
 1. Shortest Path and Minimum Spanning Tree
@@ -23,3 +36,5 @@ https://www.geeksforgeeks.org/applications-of-depth-first-search/
 
 ## Applications of Queue
  - Copy and Paste
+ 
+
