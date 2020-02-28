@@ -16,6 +16,14 @@ GINI index of income equality used in Decision Trees
 5. And more hash tables for lots of other things, such as lock managers, hash join structures, etc.  
 6. Some more specific to db engines are Pages and Rows, which are dynamic in their definitions and can't be completely stated as static structures in any programming language.  In this sense, they're more like networking packets than more traditional data structures.  Pages and Rows will be used in index structures and base table storage.
 
+## We use two data structures to implement an LRU Cache.
+
+Queue which is implemented using a doubly linked list. The maximum size of the queue will be equal to the total number of frames available (cache size). The most recently used pages will be near front end and least recently pages will be near the rear end.
+A Hash with page number as key and address of the corresponding queue node as value.We use two data structures to implement an LRU Cache.
+
+Queue which is implemented using a doubly linked list. The maximum size of the queue will be equal to the total number of frames available (cache size). The most recently used pages will be near front end and least recently pages will be near the rear end.
+A Hash with page number as key and address of the corresponding queue node as value.
+
 ## Applications of Breadth First Travesal
 
 1. Shortest Path and Minimum Spanning Tree
