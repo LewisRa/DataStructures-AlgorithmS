@@ -37,4 +37,12 @@ https://www.geeksforgeeks.org/applications-of-depth-first-search/
 ## Applications of Queue
  - Copy and Paste
  
+ ## 9. Klondike/Spider Solitaire/  advanced AI methods such as constraint propagation and make use of data structures such as BST
+There are hundreds of different varieties of Solitaire ranging like Golf, Tripeaks, Bakers Game, Thirteen and so on but probably the most difficult ones are Klondike and Spider solitaire! Klondike solitaire (which many people simply call solitaire) can make use of data structures ranging from stacks to splay trees! Also solitaire games can use Fisher-Yates Shuffle algorithm!
 
+Related Articles:
+
+Shuffle a given array using Fisher-Yates Shuffle algorithm
+Shuffle a deck of cards
+
+https://www.geeksforgeeks.org/10-projects-that-every-developer-should-lay-their-hands-on/
