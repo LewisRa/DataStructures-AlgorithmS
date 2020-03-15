@@ -56,6 +56,18 @@ A graph is a related data structure that is also quite popular (think complex ne
 ## Applications of Queue
  - Copy and Paste
  ---
+## Sorting 
+
+Quick Sort: traditionally built-in for many runtimes, hence used by programs that call the default. Can’t be used where worst-case behavior could be exploited or cause significant ramifications, such as services that might receive denial-of-service attacks, or real-time systems. Quick3 or Randomized variants avoid worst-case.
+
+Merge Sort: used in database scenarios, because stable (multi-key sort) and external (results don’t all fit in memory). Useful in distributed scenarios where additional data arrive during or after sorting. Memory consumption prevents wider use on small devices, but in-place Nlog^2N version does exist. Used in C++ runtime: stable_sort.
+
+Heap Sort: reliable in-place NlogN sort for when you can’t abide worst-case. Not commonly used as a default (previously Quick was proclaimed best; now hybrids rule). Heaps are good for keeping data “partially digested”, when you progressively receive data but don’t need to produce sorted output until it finishes arriving.
+
+Insertion Sort: great for small or mostly-sorted arrays. A “stage 2 mop-up” for hybrids.
+
+Some runtimes use hybrid sorts. Chrome V8 uses Quick to ‘divide and conquer’ then switches to Insertion once ranges are 10 or less. Python uses TimSort, a hybrid of Merge and Insertion. The .NET framework and some C++ STLs use Introsort, a hybrid of Quick and Heap. Not to be outdone, Java hybrid-izes TimSort and Insertion.
+ ---
  GINI index of income equality used in Decision Trees
 ![alt text](https://github.com/LewisRa/DataStructures-AlgorithmS/blob/master/gini_formula.jpg)
 ---
