@@ -1,7 +1,14 @@
 # Interesting Data Structures Algorithms Uses Cases
 
-GINI index of income equality used in Decision Trees
-![alt text](https://github.com/LewisRa/DataStructures-AlgorithmS/blob/master/gini_formula.jpg)
+## Difference between Linear and Non-linear Data Structures
+
+#### Linear Data Structure:
+Data structure where data elements are arranged sequentially or linearly where the elements are attached to its previous and next adjacent in what is called a linear data structure. In linear data structure, single level is involved. Therefore, we can traverse all the elements in single run only. Linear data structures are easy to implement because computer memory is arranged in a linear way. Its examples are array, stack, queue, linked list, etc.
+
+#### Non-linear Data Structure:
+Data structures where data elements are not arranged sequentially or linearly are called non-linear data structures. In a non-linear data structure, single level is not involved. Therefore, we can’t traverse all the elements in single run only. Non-linear data structures are not easy to implement in comparison to linear data structure. It utilizes computer memory efficiently in comparison to a linear data structure. Its examples are trees and graphs.
+
+
 
  ## Hashing - Search Engine
 
@@ -42,10 +49,18 @@ https://www.geeksforgeeks.org/applications-of-breadth-first-traversal/
 
 https://www.geeksforgeeks.org/applications-of-depth-first-search/
 
+--- 
+## Tree vs graph 
+A graph is a related data structure that is also quite popular (think complex networks of any kind), unlike a tree, the main difference is that there are bi-directional connections and no root 
+
 ## Applications of Queue
  - Copy and Paste
- 
- ## 9. Klondike/Spider Solitaire/  advanced AI methods such as constraint propagation and make use of data structures such as BST
+ ---
+ GINI index of income equality used in Decision Trees
+![alt text](https://github.com/LewisRa/DataStructures-AlgorithmS/blob/master/gini_formula.jpg)
+---
+
+Klondike/Spider Solitaire/ advanced AI methods such as constraint propagation and make use of data structures such as BST
 There are hundreds of different varieties of Solitaire ranging like Golf, Tripeaks, Bakers Game, Thirteen and so on but probably the most difficult ones are Klondike and Spider solitaire! Klondike solitaire (which many people simply call solitaire) can make use of data structures ranging from stacks to splay trees! Also solitaire games can use Fisher-Yates Shuffle algorithm!
 
 Related Articles:
@@ -54,3 +69,4 @@ Shuffle a given array using Fisher-Yates Shuffle algorithm
 Shuffle a deck of cards
 
 https://www.geeksforgeeks.org/10-projects-that-every-developer-should-lay-their-hands-on/
+---
