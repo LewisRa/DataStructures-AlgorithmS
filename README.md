@@ -57,7 +57,7 @@ A graph is a related data structure that is also quite popular (think complex ne
  - Copy and Paste
  ---
 ## Sorting 
-
+Sorted data powers (almost) everything. Think about it: whenever you interact with a web or mobile application, you can sort a large set of data by some property. Databases also have sort and search through huge sets of data, using something called Btrees. They sort through so much data that we, as humans, can’t even wrap our heads around!
 Quick Sort: traditionally built-in for many runtimes, hence used by programs that call the default. Can’t be used where worst-case behavior could be exploited or cause significant ramifications, such as services that might receive denial-of-service attacks, or real-time systems. Quick3 or Randomized variants avoid worst-case.
 
 Merge Sort: used in database scenarios, because stable (multi-key sort) and external (results don’t all fit in memory). Useful in distributed scenarios where additional data arrive during or after sorting. Memory consumption prevents wider use on small devices, but in-place Nlog^2N version does exist. Used in C++ runtime: stable_sort.
