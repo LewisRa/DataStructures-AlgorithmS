@@ -11,6 +11,49 @@ Data structures where data elements are not arranged sequentially or linearly ar
 
 
  ## Hashing - Search Engine
+ Functions: 
+ - add_to_index(index, keyword, url)
+ - lookup (index, keyword)
+ - add_page_to_index( index, url, content)
+ 
+ ```PY
+ def lookup(index, keyword):
+  for entry in index: 
+   if entry[0] == keyword:
+    return entry[1]
+  return []
+  ```
+  In this function, we look through the index(list of lists) to find the entry/word that match the input keyword and return the url assocites with the keyword. This works, however, we are using a for loop to go through each entry in the index which is not scalable. One solution is to kept index in a sorted order (see Quick Sort, Merge Sort, Heap Sort, etc..). Another solution is using a hashing function to store keywords is buckets that are easier to search.
+  
+  We could have a bucket for each letter but this will not scle well because 't' for example would have wayy more words in the bucket tha 'z' bucket. 
+  
+  Suppose we have b buckets and k keywords (k>b), the properites should has function are:
+  - 1. output a number between 0 and b-1. 
+  - 2. map appr. k/b keywords to buckets 0 and bucket b-1
+  
+#### Defining a hash function
+ 1.Hash functions takes the keyword and # of buckets and outputs a number between 0 and b-1 buckets
+ 2. ord() maps single letter to number
+  
+ord (<one letter string> )---> number <br>
+chr(<number>)---><one letter string> <br>
+
+print ord('a')-> 97 <br>
+print ord ('A')-> 65 <br>
+print('B')-> 66 <br>
+print chr(ord('u'))-> u <br>
+ 3.  number % modulus --> remainder
+ 
+ ```PY
+ def bad_hash_string(keyword, buckets):
+  return ord(keyword[0] % buckets)
+```
+This function takes the first letter of keyword and get the number output to get a remainder. 
+
+ 
+  
+
+  
 
 ## What data structure is used in SQL database?
 -Pretty much every data structure you've ever heard about - and many you probably haven't encountered - will be used somewhere in a database engine
@@ -62,11 +105,12 @@ Quick Sort: traditionally built-in for many runtimes, hence used by programs tha
 
 Merge Sort: used in database scenarios, because stable (multi-key sort) and external (results don’t all fit in memory). Useful in distributed scenarios where additional data arrive during or after sorting. Memory consumption prevents wider use on small devices, but in-place Nlog^2N version does exist. Used in C++ runtime: stable_sort.
 
-Heap Sort: reliable in-place NlogN sort for when you can’t abide worst-case. Not commonly used as a default (previously Quick was proclaimed best; now hybrids rule). Heaps are good for keeping data “partially digested”, when you progressively receive data but don’t need to produce sorted output until it finishes arriving.
+Heap Sort: reliable in-place NlogN sort for when you can’t abide worst-case. Not commonly used as a default (previously Quick was proclaimed best; now hybrids rule). Heaps are good for keeping data “partially digested”, when you progressively receive data but don’t need to produce sorted output until it finishes arriving.To write a heap sort algorithm, it requires knowledge of arrays and trees. 
 
 Insertion Sort: great for small or mostly-sorted arrays. A “stage 2 mop-up” for hybrids.
 
 Some runtimes use hybrid sorts. Chrome V8 uses Quick to ‘divide and conquer’ then switches to Insertion once ranges are 10 or less. Python uses TimSort, a hybrid of Merge and Insertion. The .NET framework and some C++ STLs use Introsort, a hybrid of Quick and Heap. Not to be outdone, Java hybrid-izes TimSort and Insertion.
+ 
  ---
  GINI index of income equality used in Decision Trees
 ![alt text](https://github.com/LewisRa/DataStructures-AlgorithmS/blob/master/gini_formula.jpg)
